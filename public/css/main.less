@@ -1,0 +1,126 @@
+@font-face {
+    src: url('../assets/fonts/quikhand.ttf');
+    font-family: quickhand;
+}
+
+@font-face {
+    src: url('../assets/fonts/roboto-regular.ttf');
+    font-family: roboto;
+}
+
+* {font-family: roboto};
+
+body
+{
+
+
+
+    .main_view
+    {
+        width: 100%;
+    }
+
+   /** Header Component -visible to almost all pages ()**/
+   .header-component
+   {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       background-color: white;
+       z-index: 100;
+
+       .container
+       {
+           width: 960px;
+           margin: 20px auto;
+
+            .logo-component,
+            .menubar-component
+            {
+                display: inline-block;
+            }
+
+            .logo-component
+            {
+                width: 250px;
+                float: left;
+                padding-right: 30px;
+
+                h1
+                {
+                    text-align: center;
+                    margin-left: -10px;
+                    margin-top: 10px;
+                    padding: 0px;
+                    color: #333745;
+                    border-radius: 5px;
+                    font-size: 35px;
+                    font-family: quickhand;
+                }
+            }
+
+            .menubar-component
+            {
+                width: 710px;
+                float: left;
+                font-size: 15px;
+                margin-top: 25px;
+
+                li
+                {
+                    display: inline-block;
+                    padding: 0 20px;
+                }
+
+                li:hover
+                {
+                    cursor: pointer;
+                    color: rgb(50, 70, 80);
+                    border-bottom: 2px solid rgb(50, 70, 80);
+                    transition: border-bottom 2s;
+                }
+            }
+        }
+   }
+
+   /** for cross page contents that are affected by the header **/
+   #content
+   {
+       width: 960px;
+       margin: 0 auto;
+       margin-top: 130px
+   }
+
+   .dimmer
+   {
+       position: fixed;
+       top: 0px;
+       left: 0px;
+       background-color: black;
+       opacity: 0.8;
+       width: 100%;
+       z-index: 20;
+       height: 100%;
+   }
+
+   [class*="_form"]
+   {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       z-index: 100;
+       margin-top: 50px;
+
+   }
+
+}
+
+@media only screen and (max-width: 1024px)
+{
+    .statements
+    {
+        padding: 50px;
+    }
+}
