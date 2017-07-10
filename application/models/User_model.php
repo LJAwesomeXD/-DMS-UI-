@@ -99,4 +99,12 @@
             return $result;
         }
 
+        public function rank_user($limit,$offset)
+        {
+            $this->db->select('username,gender')
+                       ->limit($limit, $offset);
+            return $this->db->get('user')->result_array();
+        
+         }
+
     }

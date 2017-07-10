@@ -80,7 +80,7 @@
              username :  $form.find("#username").val()
          };
 
-         console.log(data);
+         //console.log(data);
          app.doLogin(data, function(msg){
              if(msg=="#SUCCESS")
                 window.location = "user/profile";

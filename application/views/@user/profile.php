@@ -4,7 +4,7 @@
         <div class="ui five wide column">
             <div class="ui violet card">
               <div class="image">
-                <img style="height: 100%; width: 100%" src="<?=base_url()?>/public/media/Guy.jpg">
+                <img style="height: 100%; width: 100%" src="<?php echo site_url('image/image5.png'); ?>">
               </div>
               <div class="content">
                 <a class="header">.{username}</a>
@@ -44,9 +44,9 @@
                <i class="paint brush icon"></i>
                My Entries
              </a>
-             <a class="item" do-open="messages">
+             <a class="item" do-open="notification">
                <i class="mail icon"></i>
-               Messages
+               Notification
              </a>
              <a class="item" do-open="awards">
                <i class="cocktail icon"></i>
@@ -61,7 +61,7 @@
          <!--Dashboard Viewer Portion-->
          <div class="viewer red ui segment">
              <div class="home">
-              khjk
+              I love DesignMyShirt.com
              </div>
              <div class="my_contests" hidden>
                  My Contests
@@ -69,8 +69,8 @@
              <div class="my_entries" hidden>
                  My Entries
              </div>
-             <div class="messages" hidden>
-                 Messages
+             <div class="notification" hidden>
+                 Notification
              </div>
              <div class="awards" hidden>
                  Awards
@@ -79,7 +79,6 @@
                  Handshakes
              </div>
           </div>
-
           <script>
                 $(".dashboard_menu .item").click(function(){
                      $(".dashboard_menu .active").removeClass('active');
@@ -121,7 +120,6 @@
               This is an stretched grid column. This segment will always match the tab height
             </div>
           </div>
+      </div>
     </div>
 
-
-    </div>

@@ -22,7 +22,7 @@
         public function do_signup()
         {
             $data = $_POST;
-            $this->load->helper(array('form', 'url'));
+           /** $this->load->helper(array('form', 'url'));
             $this->load->library('form_validation');
             $this->form_validation->set_data($data);
 
@@ -76,12 +76,17 @@
             {
                 echo "#FAIL";
             }
-            else
+            else 
             {
                 $this->user_model->create_new_user($data);
                 echo "#SUCCESS";
             }
-        }
+        } **/
+
+         $this->user_model->create_new_user($data);
+                echo "#SUCCESS";
+
+            }
 
        /** Signs In a User **/
         public function do_signin()

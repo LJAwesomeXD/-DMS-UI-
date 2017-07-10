@@ -17,6 +17,7 @@
         {
             parent::__construct();
             $this->load->library('layouter');
+            $this->load->model('user_model');
             //$this->load->model('Controller_model');
         }
 
@@ -27,4 +28,21 @@
             $this->layouter->render($data);
         }
 
+        public function about()
+        {
+           $data = array("msg" => "Hello World");
+          $this->layouter->render($data);
+        }
+
+        public function designers()
+        {   
+             $limit = 10;
+             $offset  = 0;
+           $get_info = $this->user_model->rank_user($limit,$offset);
+            $data["users"] = $get_info;
+            $this->layouter->render($data);
+       
+        }
+
+        
     }
