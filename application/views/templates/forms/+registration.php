@@ -45,7 +45,7 @@
     </div>
     <div class="ui left icon input">
         <i class="at icon"></i>
-        <input type="email" id="email" placeholder="E-mail Address" />
+        <input type="text" id="email" placeholder="E-mail Address" /> 
     </div>
     <div class="ui left icon input">
          <i class="key icon"></i>
@@ -109,6 +109,7 @@
     app.regAction = function(){
 
         var $form = $(".reg_component");
+         
 
         //fetch and structure payload details
         var data = {
@@ -139,15 +140,29 @@
          });
     };
 
-    //closes the register component when x button is clicked
+    //closes the register component when x button is clicked and clear data form
     $(".close_reg_icon").click(function(){
         $(".dimmer").fadeOut();
         $(".reg_form").fadeOut();
+        $("input[type='text'], input[type='radio'],input[type='password'], select, textarea").val('');
     });
+   
+
+    //disable register button when reg is Register is click and clear data form
+     $("#do_reg").click(function(){
+        $("#do_reg").attr('disabled', '');
+        $("input[type='text'], input[type='radio'],input[type='password'], select, textarea").val('');
+      });
+    
+  
+
 
     //registers a user when register button is clicked (AJAX)
     $("#do_reg").click(app.regAction);
     $(".reg_component").keyup(function(e){
         if(e.keyCode == 13) app.regAction();
+    
+       
+
     });
 </script>

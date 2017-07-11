@@ -99,6 +99,7 @@
         request.done(cb);
     }
 
+      
     //closes the register component when x button is clicked
     $(".close_reg_icon").click(function(){
         $(".dimmer").fadeOut();
@@ -109,6 +110,8 @@
     $("#do_create_contest").click(function(){
 
         var $form = $(".create_contest_form");
+
+       
 
         //fetch and structure payload details
         var data = {
@@ -125,4 +128,20 @@
              window.location = '';
          });
     });
+  
+
+
+ /**Generate Input
+    window.generateInputs = () =>
+    {
+            $("#title").val(chance.last() + "'s Contest"),
+            $("#description").val(chance.color()),
+            $("#summary").val(chance.color ()),
+            $("#prize").val(chance.integer()),
+            $("#length").val(chance.integer())
+             $("#gender").val(chance.gender()),
+
+    }  
+    **/
+
 </script>
