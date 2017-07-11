@@ -12,13 +12,19 @@
         {
             parent::__construct();
             $this->load->library('layouter');
-            $this->load->model('Admin_model');
+            $this->load->model('admin_model');
+            $this->load->model('contests_model');
+            $this->load->model('user_model');
         }
 
-       /** Index Action - short description **/
-        public function index()
+        
+        public function admin_panel()
         {
-            $data = array("msg" => "Hello World");
-            //$this->layouter->render('controller/index', $data);
+
+
+          $data = array("msg" => "Hello World");
+            $this->layouter->render($data);
+
         }
+
     }
