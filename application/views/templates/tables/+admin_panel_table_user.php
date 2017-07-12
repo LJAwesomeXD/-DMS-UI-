@@ -20,46 +20,22 @@
     </tr>
   </thead>
   <tbody>
+    <?php foreach($users as $user): ?>
     <tr>
       <td class="collapsing">
         <div class="ui fitted slider checkbox">
           <input type="checkbox"> <label></label>
         </div>
       </td>
-      <td>Ominga</td>
-      <td>Cocoy</td>
-      <td>Admin_MarkSteady</td>
-      <td>M</td>
-      <td>cominga@gbox.adnu.edu.ph</td>
+      <td><?=$user["last_name"]?></td>
+      <td><?=$user["first_name"]?></td>
+      <td><?=$user["username"]?></td>
+      <td><?=$user["gender"]?></td>
+      <td><?=$user["email"]?></td>
       <td><i class="user icon"></i></td>
     </tr>
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox">
-          <input type="checkbox"> <label></label>
-        </div>
-      </td>
-      <td>Sta Ana</td>
-      <td>Levijohn</td>
-      <td>Admin_Lj</td>
-      <td>M</td>
-       <td>lstana@gbox.adnu.edu.ph</td>
-      <td><i class="user icon"></i></td>
-    </tr>
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox">
-          <input type="checkbox"> <label></label>
-        </div>
-      </td>
-      <td>Dela Torre</td>
-      <td>Natalie</td>
-      <td>Sexy_natz</td>
-      <td>F</td>
-       <td>ndelatorre@gbox.adnu.edu.ph</td>
-      <td><i class="remove user icon"></i></td>
-    </tr>
-  </tbody>
+          <?php endforeach?>
+      </tbody>
   <tfoot class="full-width">
     <tr>
       <th></th>

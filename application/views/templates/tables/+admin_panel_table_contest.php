@@ -21,49 +21,24 @@
     </tr>
   </thead>
   <tbody>
+   <?php foreach($contests as $contest): ?>
     <tr>
+       
       <td class="collapsing">
         <div class="ui fitted slider checkbox">
           <input type="checkbox"> <label></label>
         </div>
       </td>
-      <td>Dugong Atenista Contest</td>
+      <td><?=$contest["title"]?></td>
       <td>Admin_MarkSteady</td>
-      <td>5000</td>
-      <td>Basic T Shirt design for cause</td>
-      <td>G</td>
-      <td>7 days</td>
+      <td><?=$contest["prize"]?></td>
+      <td><?=$contest["description"]?></td>
+      <td><?=$contest["gender"]?></td>
+      <td><?=$contest["length"]?> day/s</td>
       <td>On Going</td>
+        
     </tr>
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox">
-          <input type="checkbox"> <label></label>
-        </div>
-      </td>
-      <td>Couple Shirt Contest</td>
-      <td>Admin_LJ</td>
-      <td>1500</td>
-      <td>Couple Shirt for 1st Anniversary</td>
-       <td>F</td>
-      <td>5 days</td>
-      <td>Pause</td>
-
-    </tr>
-    <tr>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox">
-          <input type="checkbox"> <label></label>
-        </div>
-      </td>
-      <td>Mother's Day Special</td>
-      <td>RIAN_XD</td>
-      <td>1700</td>
-      <td>Mother's Day Special Design, a gift for my Mom</td>
-       <td>F</td>
-      <td>7 days</td>
-      <td>Completed</td>
-    </tr>
+          <?php endforeach?>
   </tbody>
   <tfoot class="full-width">
     <tr>

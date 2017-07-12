@@ -21,10 +21,26 @@
         public function admin_panel()
         {
 
+              $limit = 10;
+             $offset  = 0;
 
-          $data = array("msg" => "Hello World");
+            //Users_Panel
+
+            
+           $get_info = $this->admin_model->get_users($limit,$offset);
+            $data["users"] = $get_info;
+           // print_r($data['users']);die();
             $this->layouter->render($data);
 
+            //Contests_Panel
+
+
+             $get_info_contest = $this->admin_model->get_contests($limit,$offset);
+            $data["contests"] = $get_info_contest;
+            //print_r($data['contests']);die();
+            $this->layouter->render($data);
+
+              
         }
 
     }
